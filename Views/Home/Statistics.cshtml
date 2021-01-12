@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Zagrean_Robert_project.Models.LibraryViewModels.OrderGroup>
+@{
+    ViewData["Tip"] = "Ordered Suplements Statistics";
+}
+<h2>Ordered Books Statistics</h2>
+<table>
+    <tr>
+        <th>
+            Order Date
+        </th>
+        <th>
+            Ordered Suplements
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+            </td>
+            <td>
+                @item.BookCount
+            </td>
+        </tr>
+    }
+</table>
